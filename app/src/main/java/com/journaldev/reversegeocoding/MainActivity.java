@@ -120,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE) {
+        if (requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE)
+        {
             if (resultCode == RESULT_OK) {
                 Place place = PlaceAutocomplete.getPlace(this, data);
                 if (!place.getAddress().toString().contains(place.getName())) {
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
             } else if (resultCode == PlaceAutocomplete.RESULT_ERROR) {
                 printToast("Error in retrieving place info");
-
+                //AIzaSyAUbLoUPNa5fwzmQfVwh-SjWdg2vHUs8Fw
             }
         }
     }
